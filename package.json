@@ -1,0 +1,107 @@
+{
+  "name": "cra-template-demo",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "cra-template-npm-library": "2.0.5",
+    "lodash": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "clean:lib": "rm -rf dist",
+    "compile:lib": "rollup -c",
+    "build:lib": "run-s clean:lib compile:lib",
+    "lint:code": "eslint ./src/",
+    "fix:code": "run-s 'lint:js --fix'",
+    "lint:types": "tsc --pretty --noEmit",
+    "lint:style": "stylelint ./src/**/*.css",
+    "fix:style": "run-s 'lint:style --fix'",
+    "start:docs": "storybook dev -p 6006",
+    "build:docs": "storybook build",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "style": "dist/style.css",
+  "types": "dist/types.d.ts",
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "11.1.6",
+    "@storybook/addon-essentials": "7.6.17",
+    "@storybook/addon-interactions": "7.6.7",
+    "@storybook/addon-links": "7.6.17",
+    "@storybook/blocks": "7.6.7",
+    "@storybook/preset-create-react-app": "7.6.6",
+    "@storybook/react": "7.6.3",
+    "@storybook/react-webpack5": "7.6.1",
+    "@storybook/testing-library": "0.2.2",
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/react": "14.2.2",
+    "@testing-library/user-event": "14.5.2",
+    "@types/jest": "29.5.12",
+    "@types/lodash": "4.17.0",
+    "@types/node": "20.12.3",
+    "@types/react": "18.2.73",
+    "@types/react-dom": "18.2.23",
+    "@typescript-eslint/eslint-plugin": "7.0.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "@yelo/rollup-node-external": "1.0.1",
+    "autoprefixer": "10.4.19",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-ssr-friendly": "1.3.0",
+    "eslint-plugin-storybook": "0.8.0",
+    "husky": "9.0.11",
+    "identity-obj-proxy": "^3.0.0",
+    "is-ci": "3.0.1",
+    "lint-staged": "15.2.2",
+    "npm-run-all": "4.1.5",
+    "postcss-preset-env": "9.5.4",
+    "prettier": "2.8.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1",
+    "recursive-copy": "2.0.14",
+    "rimraf": "5.0.5",
+    "rollup": "4.13.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "4.0.2",
+    "storybook": "7.6.7",
+    "stylelint": "15.11.0",
+    "stylelint-config-standard": "34.0.0",
+    "stylelint-order": "6.0.4",
+    "typescript": "4.8.4",
+    "webpack": "5.91.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}
